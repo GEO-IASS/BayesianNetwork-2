@@ -1,5 +1,3 @@
-#!/usr/bin/python
-
 from BayesianNetwork.BayesianNetwork import *
 from BayesianNetwork.utils import *
 from IPython.display import Image
@@ -37,7 +35,7 @@ def RunManualExample( example ):
     G.GetBeliefs()
 
     ### Calibrate the graph without any additional evidence
-    BayesianNetwork.ExportAsDOT(G,'hello.dot', style = "filled, bold", penwidth = 1, fillcolor = "white", fontname = "Courier", shape = "Msquare",fontsize=10)
+    ExportAsDOT(G,'hello.dot', style = "filled, bold", penwidth = 1, fillcolor = "white", fontname = "Courier", shape = "Msquare",fontsize=10)
 
     
     ### Add information to the Bayesian network
@@ -45,7 +43,7 @@ def RunManualExample( example ):
     G.AddEvidence( {'3': [1.,0.]} )
     G.BeliefPropagation()
     G.GetBeliefs()
-    BayesianNetwork.ExportAsDOT(G,'hello.dot', style = "filled, bold", penwidth = 1, fillcolor = "white", fontname = "Courier", shape = "Msquare",fontsize=10)
+    ExportAsDOT(G,'hello.dot', style = "filled, bold", penwidth = 1, fillcolor = "white", fontname = "Courier", shape = "Msquare",fontsize=10)
 
     ### Display the Bayesian network in the IPython Notebook
     g = pydot.graph_from_dot_data(open('hello.dot','r').read())

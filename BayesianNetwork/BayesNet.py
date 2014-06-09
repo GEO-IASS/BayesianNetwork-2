@@ -1,7 +1,7 @@
-
 from itertools import product
 import numpy as np
 import glob,re,json
+
 from .Node import *
 
 __all__ = ['BayesNet']
@@ -189,7 +189,8 @@ class BayesNet():
 
         INPUT: node - node name 
         """
-        self.Nodes[node].evidence = []
+        for n in node.keys():
+            self.Nodes[n].evidence = []
     
     def add_edge(self, i, j):
         """
