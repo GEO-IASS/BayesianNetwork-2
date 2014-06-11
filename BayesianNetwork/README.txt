@@ -31,4 +31,4 @@ Requires numpy, and graphviz for graphical output.
 pydot and IPython are optional.
 
 Additional help:
-contact bhsu22@gmail.com
+contact bhsu
