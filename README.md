@@ -10,12 +10,17 @@ Construct and calibrate a Bayesian network from survey data. BayesianNetwork con
 #### OR
 
 1. Add the package path to python's system directory by:
-	>>> import sys
-	>>> sys.path.append(PACKAGE_PATH_NAME)
+```python
+import sys
+sys.path.append(PACKAGE_PATH_NAME)
+```
 
 2. Then import the Bayesian network routines with
-	>>> from BayesianNetwork.BayesNet import *
-	>>> from BayesianNetwork.utils import *
+```python
+from BayesianNetwork.BayesNet import *
+from BayesianNetwork.utils import *
+```
+
 3. Routines should now be in the python environment. See examples for further implementation details/ideas.
 
 #### REQUIREMENTS
