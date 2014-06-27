@@ -172,9 +172,9 @@ class BayesNet():
             node.ComputeBeliefs( self.m_down, self.m_up )
     
     
-    def AddEvidence( self, node_state_dict):
+    def SetPrior(self, mode_state_dict):
         """
-        Add evidence to a node.
+        Set a prior distribution for a nodes in a Bayesian network
 
         INPUT: node_state_dict - dictionary of nodes that have evidence. keys=node names, values = probability distributions.
         OUTPUT: A Bayesian network with nodes with a priori distributions set
@@ -183,9 +183,9 @@ class BayesNet():
         for k,v in node_state_dict.items():
             self.Nodes[k].evidence = v/np.sum(v)
     
-    def RemoveEvidence(self, node):
+    def RemovePrior(self, node):
         """
-        Removes evidence from a node.
+        Removes prior distribution from a node.
 
         INPUT: node - node name 
         """

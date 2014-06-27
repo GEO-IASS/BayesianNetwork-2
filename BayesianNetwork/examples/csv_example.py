@@ -52,10 +52,10 @@ file_name = 'from_CSV_file/example_%d.dot'
 ### loop through each of the cases and save to a *.dot file.
 for i,c in enumerate(Combinations):
     print 'Adding evidence: ' +str(c)
-    Graph.AddEvidence(c)
+    Graph.SetPrior(c)
     Graph.BeliefPropagation()
     ExportAsDOT(Graph, file_name%i, show_interactions=False, style = "filled, bold", penwidth = 1,
                             fillcolor = "white", fontname = "Courier", shape = "Msquare", fontsize=10)
-    Graph.RemoveEvidence(c) ### remove the evidence, otherwise it accumulates in the network
+    Graph.RemovePrior(c) ### remove the evidence, otherwise it accumulates in the network
 
 

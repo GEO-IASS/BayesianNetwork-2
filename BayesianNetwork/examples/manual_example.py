@@ -40,7 +40,7 @@ def RunManualExample( example ):
     
     ### Add information to the Bayesian network
     ### make node '3' be in the state 0
-    G.AddEvidence( {'3': [1.,0.]} )
+    G.SetPrior( {'3': [1.,0.]} )
     G.BeliefPropagation()
     G.GetBeliefs()
     ExportAsDOT(G,'hello.dot', style = "filled, bold", penwidth = 1, fillcolor = "white", fontname = "Courier", shape = "Msquare",fontsize=10)
