@@ -172,7 +172,7 @@ class BayesNet():
             node.ComputeBeliefs( self.m_down, self.m_up )
     
     
-    def SetPrior(self, node_state_dict):
+    def AddEvidence(self, node_state_dict):
         """
         Set a prior distribution for a nodes in a Bayesian network
 
