@@ -1,4 +1,4 @@
-from BayesianNetwork.BayesianNetwork import *
+from BayesianNetwork.BayesNet import *
 from BayesianNetwork.utils import *
 from IPython.display import Image
 import pydot
@@ -27,7 +27,7 @@ def RunManualExample( example ):
     present.
     """
     
-    G = BayesianNetwork.BayesNet()
+    G = BayesNet()
     G.GraphFromAdjList( 'manual_specification/%s/graph.txt'%example )
     G.InteractionsFromFolder( 'manual_specification/%s/interactions/'%example )
     G.InitializeGraphMsgs()
